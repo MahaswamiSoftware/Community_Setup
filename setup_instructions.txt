@@ -1,0 +1,43 @@
+Step 1:   
+   location: /etc/hosts 
+   Add below mentioned line     
+   192.168.2.5	build.commongroundpublishing.com
+   
+   Make sure that in home directory .gemrc file exists with this lines mentioned below:
+  
+  	:sources: 
+  	- https://build.commongroundpublishing.com/gems/
+   Note:
+   - .gemrc file not exists in home directory then create and add this two lines.
+
+Step 2:
+   In the setup.sh
+   change this lines:
+      #setup the ruby compatible versions and gemsets
+		scholar_location=<location of your scholar>
+		identity_ruby_version=<Give your Ruby MRI version>
+		identity_gemset=<Give your Ruby MRI version gemset>
+		community_ruby_version=<Give your jruby version>
+		community_gemset=<Give Your jruby version gemset>
+		
+	  # Setup database authentications
+		database_username=<database username>
+		database_password=<database password>
+
+	  # Setup database names accordingls branch
+		community_database=<community database name>
+		comment_service_database=<comment service database name>
+		lookup_service_database=<lookup service database name>
+		message_service_database=<message service database name>
+		role_service_database=<role service database name>
+		notification_service_database=<notification service database name>
+		star_service_database=<star service database name>
+		
+   Now run the setup.sh file using this command.
+     ./setup.sh
+  
+   
+   
+
+
+ 
